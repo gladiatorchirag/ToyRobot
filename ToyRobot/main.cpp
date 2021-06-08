@@ -16,7 +16,7 @@ int main()
     std::cin >> prompt;*/
     std::cout << "-----------------------------------------" << std::endl;
     std::regex rgxJustMatchPlaceCmd("^(PLACE)(\\s.*)*$", std::regex_constants::icase);
-    std::regex rgxPlaceCmd("^(PLACE)\\s+([0-9])\\s*,\\s*([0-9])\\s*,\\s*(SOUTH|EAST|NORTH|WEST)\\s*$", std::regex_constants::icase);
+    std::regex rgxPlaceCmd("^(PLACE)\\s+([0-9]+)\\s*,\\s*([0-9]+)\\s*,\\s*(SOUTH|EAST|NORTH|WEST)\\s*$", std::regex_constants::icase);
     //std::regex rgxMoveCmd("^MOVE\\s*$", std::regex_constants::icase);// strictly just the MOVE command
     std::regex rgxMoveCmd("^(MOVE)(\\s.*)*$", std::regex_constants::icase);
     //std::regex rgxLeftCmd("^LEFT\\s*$", std::regex_constants::icase);// strictly just the LEFT command
