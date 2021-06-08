@@ -1,5 +1,7 @@
 # ToyRobot
-ToyRobot is a console application. It is a simulation of a toy robot moving on a square table top of dimensions 5 units x 5 units. The robot is free to roam around the table but does not fall. 
+ToyRobot is a console application written in C++. 
+
+It is a simulation of a toy robot moving on a square table top of dimensions 5 units x 5 units. The robot is free to roam around the table but does not fall. 
 The application can read commands of the following form:
 * PLACE X,Y,F
 * MOVE
@@ -14,7 +16,7 @@ Please use Visual Studio 2019 to build and run the application.
 Unit tests are written using Microsoft Unit testing framework.
 
 ## Commands reference 
-* PLACE command puts the robot in position X,Y and facing NORTH,EAST,SOUTH or WEST. the origin (0,0) is considered as the south west corner.
+* PLACE command puts the robot in position X,Y on the table and facing NORTH,EAST,SOUTH or WEST. The origin (0,0) is considered as the south west corner.
   * Usage: PLACE 0,3,NORTH
   * Arguments to PLACE command must strictly be X,Y,F
   * Any other command must be preceeded by a successful PLACE command, otherwise it is ignored.
@@ -27,3 +29,5 @@ Unit tests are written using Microsoft Unit testing framework.
 * REPORT command will output the X,Y and F of the robot on the commandline.
 * HELP command is added to display help text at run time.
 
+## NOTE
+* A robot that is not on the table will ignore MOVE, LEFT, RIGHT and REPORT commands.
